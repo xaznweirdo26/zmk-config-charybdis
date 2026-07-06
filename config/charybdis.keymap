@@ -152,6 +152,48 @@
                 <&macro_release>,
                 <&mkp LCLK &kp LCTRL &kp LGUI>;
         };
+
+        mac_screenshot: mac_screenshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp LEFT_GUI &kp NUMBER_4>;
+            label = "MAC_SCREENSHOT";
+        };
+
+        macro_p1: macro_p1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(D) &kp O &kp L &kp L &kp A &kp R &kp DOT &kp A &kp I &kp R &kp P &kp O &kp R &kp T &kp S &kp DOT &kp T &kp R &kp I &kp P &kp P &kp DOT &kp B &kp O &kp T &kp T &kp O &kp M &kp N2>;
+            label = "MACRO_P1";
+        };
+
+        macro_p2: macro_p2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(H) &kp LS(G) &kp E &kp E &kp LS(S) &kp H &kp I &kp C &kp K &kp S &kp N4 &kp N5>;
+            label = "MACRO_P2";
+        };
+
+        macro_p3: macro_p3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(C) &kp H &kp A &kp R &kp D &kp M &kp O &kp N &kp S &kp T &kp E &kp R &kp N4 &kp N5>;
+            label = "MACRO_P3";
+        };
+
+        macro_1p: macro_1p {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(T) &kp O &kp K &kp W &kp A &kp SQT &kp T &kp B &kp A &kp B &kp O &kp Y &kp N4>;
+            label = "MACRO_1P";
+        };
+
+        macro_bw: macro_bw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(M) &kp A &kp G &kp N &kp E &kp T &kp I &kp C &kp K &kp I &kp N &kp E &kp T &kp I &kp C &kp T &kp AT &kp Y &kp N1>;
+            label = "MACRO_BW";
+        };
     };
 
     combos {
@@ -202,11 +244,11 @@
             label = "BASE";
             display-name = "Base";
             bindings = <
-&kp ESC    &kp N1       &kp N2       &kp N3        &kp N4         &kp N5     &kp N6         &kp N7              &kp N8            &kp N9           &kp N0          &kp DEL
-&kp TAB    &kp Q        &kp W        &kp E         &kp R          &kp T              &kp Y  &kp U               &kp I             &kp O            &kp P           &kp BSLH
-&kp RCTRL  &kp A        &kp S        &kp D         &kp F          &kp G              &kp H  &kp J               &kp K             &kp L            &kp SEMI        &kp SQT
-&kp LSFT   &hml LGUI Z  &hml LALT X  &hml LCTRL C  &hml LSHIFT V  &kp B              &kp N  &hmr RSHIFT M       &hmr RCTRL COMMA  &hmr RALT DOT    &hmr RGUI FSLH  &kp RETURN
-           &lalt_dt     &mo LOWER    &mo POINTER   &gui_ctrlb     &kp LCTRL  &none          &blt SYMBOLS SPACE                    &blt RAISE BSPC
+&kp ESC         &kp N1           &kp N2        &kp N3        &kp N4             &kp N5     &kp N6         &kp N7              &kp N8            &kp N9           &kp N0          &kp BACKSPACE
+&kp TAB         &kp Q            &kp W         &kp E         &kp R              &kp T              &kp Y  &kp U               &kp I             &kp O            &kp P           &kp BSLH
+&kp LEFT_SHIFT  &kp A            &kp S         &kp D         &kp F              &kp G              &kp H  &kp J               &kp K             &kp L            &kp SEMI        &kp SQT
+&kp LCTRL       &hml LG(Z) Z     &hml LG(X) X  &hml LG(C) C  &hml LG(LSHIFT) V  &kp B              &kp N  &hmr RSHIFT M       &hmr RCTRL COMMA  &hmr RALT DOT    &hmr RGUI FSLH  &kp RETURN
+                &mac_screenshot  &mo LOWER     &lalt_dt      &mo 1              &kp LCTRL  &none          &blt SYMBOLS SPACE                    &blt RAISE BSPC
             >;
         };
 
@@ -214,11 +256,11 @@
             label = "POINTER";
             display-name = "Pointer";
             bindings = <
-&kp GRAVE    &kp F1           &kp F2           &kp F3            &kp F4             &kp F5      &kp F6                   &kp F7               &kp F8          &kp F9         &kp F10         &trans
-&kp LA(TAB)  &kp LGUI         &kp LALT         &mo SNIPING       &mkp MB4           &mkp MB5            &kp HOME         &kp PG_DN            &kp PG_UP       &kp END        &kp F11         &kp F12
-&kp RCTRL    &kp LG(A)        &ctrl_cmd_hold   &mkp RCLK         &mkp LCLK          &mkp MCLK           &kp LEFT         &kp DOWN             &kp UP          &kp RIGHT      &kp MINUS       &kp EQUAL
-&kp LSFT     &hml LGUI LG(Z)  &hml LALT LG(X)  &hml LCTRL LG(C)  &hml LSHIFT LG(V)  &mo SCROLL          &kp RC(LS(TAB))  &hmr RSHIFT LC(TAB)  &hmr RCTRL INS  &hmr RALT INS  &hmr RGUI LBKT  &kp RBKT
-             &trans           &trans           &trans            &trans             &trans      &trans                   &trans                               &trans
+&macro_p3  &kp F1           &kp F2           &kp F3            &kp F4             &kp F5      &kp F6                   &kp F7               &kp F8          &kp F9         &kp F10         &trans
+&macro_p2  &kp LGUI         &kp LALT         &mo SNIPING       &mkp MB4           &mkp MB5            &kp HOME         &kp PG_DN            &kp PG_UP       &kp END        &kp F11         &kp F12
+&macro_bw  &macro_p1        &ctrl_cmd_hold   &mkp RCLK         &mkp LCLK          &mkp MCLK           &kp LEFT         &kp DOWN             &kp UP          &kp RIGHT      &kp MINUS       &kp EQUAL
+&macro_1p  &hml LGUI LG(Z)  &hml LALT LG(X)  &hml LCTRL LG(C)  &hml LSHIFT LG(V)  &mo SCROLL          &kp RC(LS(TAB))  &hmr RSHIFT LC(TAB)  &hmr RCTRL INS  &hmr RALT INS  &hmr RGUI LBKT  &kp RBKT
+           &trans           &trans           &trans            &trans             &trans      &trans                   &trans                               &trans
             >;
         };
 
