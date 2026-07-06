@@ -156,7 +156,7 @@
         mac_screenshot: mac_screenshot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp LEFT_GUI &kp NUMBER_4>;
+            bindings = <&kp LEFT_GUI &kp LEFT_CONTROL &kp LEFT_SHIFT &kp NUMBER_4>;
             label = "MAC_SCREENSHOT";
         };
 
