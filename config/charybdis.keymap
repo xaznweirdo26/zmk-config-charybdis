@@ -289,11 +289,11 @@
             label = "POINTER";
             display-name = "Pointer";
             bindings = <
-&macro_bw  &macro_1p        &kp F2           &kp F3            &kp F4             &kp F5     &kp F6                   &kp F7               &kp F8          &kp F9         &kp F10         &trans
-&macro_p3  &kp LGUI         &kp LALT         &mo 6             &mkp MB4           &mkp MB5           &kp HOME         &kp PG_DN            &kp PG_UP       &kp END        &kp F11         &kp F12
-&macro_p1  &hml LG(A) A     &ctrl_cmd_hold   &mkp RCLK         &mkp LCLK          &mkp MCLK          &kp LEFT         &kp DOWN             &kp UP          &kp RIGHT      &kp MINUS       &kp EQUAL
-&macro_p2  &hml LGUI LG(Z)  &hml LALT LG(X)  &hml LCTRL LG(C)  &hml LSHIFT LG(V)  &mo 5              &kp RC(LS(TAB))  &hmr RSHIFT LC(TAB)  &hmr RCTRL INS  &hmr RALT INS  &hmr RGUI LBKT  &kp RBKT
-           &trans           &trans           &trans            &trans             &trans     &trans                   &trans                               &trans
+&macro_bw  &macro_1p         &kp F2            &kp F3                &kp F4                 &kp F5            &kp F6                   &kp F7               &kp F8          &kp F9         &kp F10         &trans
+&macro_p3  &hml LC(Q) LG(Q)  &hml LC(W) LG(W)  &mo 6                 &hml LC(R) LG(R)       &hml LC(T) LG(T)          &kp HOME         &kp PG_DN            &kp PG_UP       &kp END        &kp F11         &kp F12
+&macro_p1  &hml LC(A) LG(A)  &ctrl_cmd_hold    &mkp RCLK             &mkp LCLK              &mkp MCLK                 &kp LEFT         &kp DOWN             &kp UP          &kp RIGHT      &kp MINUS       &kp EQUAL
+&macro_p2  &hml LC(Z) LG(Z)  &hml LC(X) LG(X)  &hml LC(LCTRL) LG(C)  &hml LC(LSHIFT) LG(V)  &mo 5                     &kp RC(LS(TAB))  &hmr RSHIFT LC(TAB)  &hmr RCTRL INS  &hmr RALT INS  &hmr RGUI LBKT  &kp RBKT
+           &trans            &trans            &trans                &trans                 &trans            &trans                   &trans                               &trans
             >;
         };
 
